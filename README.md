@@ -5,26 +5,28 @@
 ## Déploiement sur GitHub
 
 1. Créez un nouveau dépôt sur GitHub via l'interface web.
-2. Dans le terminal de votre projet, initialisez Git (si ce n'est pas déjà fait):
+2. Dans le terminal, initialisez Git (si ce n'est pas déjà fait) et ajoutez vos fichiers :
    ```
    git init
-   ```
-3. Ajoutez tous les fichiers et faites un commit en exécutant séparément:
-   ```
    git add .
    git commit -m "Initial commit"
    ```
-   ou en une seule ligne:
+3. Configurez votre dépôt distant :
    ```
-   git add . && git commit -m "Initial commit"
+   git remote set-url origin https://github.com/Mushhyz/App.git
    ```
-4. Ajoutez le dépôt distant:
+4. Poussez votre code sur GitHub :
    ```
-   git remote add origin https://github.com/votre-nom-utilisateur/nom-du-depot.git
+   git push -u origin main
    ```
-5. Poussez votre code:
+
+## Déploiement en local
+
+1. Assurez-vous que Flutter est installé sur votre machine et que vous avez configuré un émulateur ou connecté un appareil.
+2. Dans le terminal, exécutez :
    ```
-   git push -u origin master
+   flutter pub get
+   flutter run
    ```
 
 ## Déploiement continu (optionnel)
